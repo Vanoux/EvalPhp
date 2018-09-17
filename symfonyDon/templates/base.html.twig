@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        {% endblock %}
+    </head>
+
+    <body>
+      
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">SymfonyDons</a>
+                    
+                    
+                    <div class="">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <!--Fontion path() permet de retrouver l'url en fonction du nom d'une Route-->
+                                <a class="nav-link" href="{{ path('site_don')}}">Annonces</a>
+                            </li>
+                            <li class="nav-item">
+                                <!--Fontion path() permet de retrouver l'url en fonction du nom d'une Route-->
+                                <a class="nav-link" href="#">Poster une annonce</a>
+                            </li>
+                            <li class="nav-item">
+                                    <!--Fontion path() permet de retrouver l'url en fonction du nom d'une Route-->
+                                <a class="nav-link" href="#">S'enregistrer / Se connecter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

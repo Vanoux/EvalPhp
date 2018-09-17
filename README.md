@@ -1,7 +1,11 @@
 # EvalPhp
 
 Outils : Symfony
+
+Diagrammes : Dossier Diagrammes du projet 
 Wireframes : https://marvelapp.com/9gja16h/screen/47932664
+
+Kanban : https://github.com/Vanoux/EvalPhp/projects/1?add_cards_query=is%3Aopen
 
 
 Utilisez l'outil (framework ou CMS) de votre choix, en tenant compte des compétences du référentiel qui doivent être évaluées.
