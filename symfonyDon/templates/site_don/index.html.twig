@@ -15,7 +15,7 @@
                 <img src="{{ annonce.image }}" alt="">
                 {{ annonce.lieu}}
                 {{ annonce.description | raw }}
-                <a href="{{ path('site_don', {'id': annonce.id}) }}" class="btn btn-primary">lire la suite</a>
+                <a href="{{ path('annonce_show', {'id': annonce.id}) }}" class="btn btn-primary">lire la suite</a>
             </div>
         </articles>
         {% endfor %}

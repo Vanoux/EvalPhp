@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<articles>
+        <h2>{{ annonce.titre }}</h2>
+        <div class="content">
+            <h4>{{ annonce.categorie }}</h4>
+            <img src="{{ annonce.image }}" alt="">
+            {{ annonce.lieu}}
+            {{ annonce.description | raw }}
+        </div>
+    </articles>
+
+{% endblock %}

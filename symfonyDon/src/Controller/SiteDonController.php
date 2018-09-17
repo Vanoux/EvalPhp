@@ -39,4 +39,64 @@ class SiteDonController extends AbstractController
     {
         return $this->render('site_don/home.html.twig');
     }
+
+    /**
+     * @Route("/site/don/{id}", name="annonce_show")
+     */
+// Page pour montrer une annonce
+    public function show($id)
+    {
+        $repo =$this->getDoctrine()->getRepository(Annonce::class);
+
+        $annonce = $repo->find($id);
+        return $this->render('site_don/show.html.twig', [
+            'annonce' => $annonce
+        ]);  
+    }
+
+//     /**
+//      * @Route(/site/don/new, name="annonce_new")
+//      */
+// // Page Poster une annonce
+//     public function create(Request $request, ObjectManager $manager)
+//     {
+//       $annonce = new Annonce();
+
+//     //Pour créer un form lié à mon annonce
+//     $form = $this->createFormBuilder($annonce)
+//                 // Configuation du formulaire
+//                  ->add('titre', TextType::class,[
+//                     'attr' => [
+//                         'placeholder'=> "Titre de l'annonce"
+//                     ]
+//                  ])
+//                  ->add('categorie', TextType::class,[
+//                     'attr' => [
+//                         'placeholder'=> "Catégorie de l'annonce"
+//                     ] 
+//                  ])
+//                  ->add('description', TextareaType::class,[
+//                     'attr' => [
+//                         'placeholder'=> "Description de l'annonce"
+//                     ]
+//                 ])
+//                 ->add('lieu', TextType::class,[
+//                     'attr' => [
+//                         'placeholder'=> "Lieu de l'annonce"
+//                     ] 
+//                  ])
+//                  ->add('image', TextType::class,[
+//                     'attr' => [
+//                         'placeholder'=> "Image de l'annonce"
+//                     ] 
+//                  ])
+//                 // resultat final avec la fonction getForm()
+//                  ->getForm();
+        
+//         return $this-render('site_don/create.html.twig', [
+//             'formAnnonce' => $form->createView()
+//         ]);
+
+    
+//     }
 }
