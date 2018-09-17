@@ -55,7 +55,7 @@ class SiteDonController extends AbstractController
     }
 
 //     /**
-//      * @Route(/site/don/new, name="annonce_new")
+//      * @Route("/site/don/new", name="annonce_new")
 //      */
 // // Page Poster une annonce
 //     public function create(Request $request, ObjectManager $manager)
